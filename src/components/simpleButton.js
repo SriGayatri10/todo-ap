@@ -1,12 +1,12 @@
 import { React } from 'react';
-import config from '../core/config';
+// import config from '../core/config';
 import context from '../core/context';
 
 const SimpleButton = () =>
 	<button
-		onClick={ () => context.actions.increaseCount(config.increment) }
+		onClick={ () => context.actions.Add() }
 	>
-		Click Me!
+		Add
 	</button>;
 
 export default SimpleButton;
