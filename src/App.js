@@ -1,19 +1,14 @@
-import { React, useEffect } from 'react';
+/* eslint-disable no-console */
+import { React } from 'react';
 import './App.scss';
 import context from './core/context';
-import SampleService from './services/sample';
-import SimpleButton from './components/simpleButton';
+import Input from './components/text-box';
 
 const App = () => {
-	useEffect(SampleService.sayHai, []);
-
-	return (
-		<div className="App">
-			<div>Count: { context.state.count }</div>
-			<div>{ SimpleButton() }</div>
-			<div>Refresh ID: { context.state.refreshID }</div>
-		</div>
-	);
+	console.log(context.state);
+	return <div className="text-box">
+		<div>{Input()}</div>
+	</div>;
 };
 
 export default App;
